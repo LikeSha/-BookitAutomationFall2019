@@ -29,7 +29,7 @@ public class APIUtilities {
     /**
      * This method is used to retrieve authorization token from the server for specific role.
      * Token must be attached to the header of every API call
-     * @return
+     * @return token
      */
     public static String getToken(String role){
         String email = null;
