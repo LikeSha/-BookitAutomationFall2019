@@ -9,6 +9,7 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.hamcrest.MatcherAssert;
 import org.junit.Assert;
 
 import java.util.List;
@@ -68,5 +69,6 @@ public class APIStepDefinitions {
     public void user_payload_contains_following_room_names(List<String> dataTable) {
          List<String> roomNames = response.jsonPath().getList("name");
          Assert.assertTrue(roomNames.containsAll(dataTable));
+
     }
 }
